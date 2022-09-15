@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #059669;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: #222;
+}
+
+header {
+  position: relative;
+  top: 0;
+  position: sticky;
+  border-bottom: #05966865 solid 1px;
+  backdrop-filter: blur(5px);
+  height: 100px;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  color: #059669;
+  font-size: 25px;
+}
+
+main {
+  height: 100vh;
+  transition: all 1s ease;
+}
+
+.a {
+  text-decoration: none;
+  color: #059668;
+  text-decoration-color: #059668;
+  text-decoration-line: none;
+}
+
+ol {
+  list-style: none;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.cot {
+  margin: 3rem;
+}
+
+.titulo {
+  font-size: 45px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+#async {
+  display: grid;
+  grid-template-columns: repeat(2, 400px);
+  grid-template-rows: auto;
+  grid-gap: 1rem;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  border: solid rgb(165, 165, 165) 1px;
+  height: 270px;
+  min-width: 400px;
+  text-align: center;
+  border-radius: 16px;
+  box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.151);
+  background: rgb(231, 231, 231);
+}
+
+.card:nth-child(2) {
+  grid-row: 1/2;
+  grid-column: 1/3;
+}
+.card:nth-child(2) > .nombre {
+  font-size: 50px;
+  font-weight: bold;
+}
+.nombre {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.compra {
+  color: rgb(94, 94, 94);
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.venta {
+  color: rgb(94, 94, 94);
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.card:nth-child(2) > .compra {
+  font-size: 30px;
+}
+
+@media screen and (max-width: 880px) {
+  #async {
+    grid-template-columns: repeat(1, auto);
+  }
+  .card:nth-child(2) {
+    grid-row: 1/1;
+    grid-column: 1/1;
+  }
+  .titulo {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .card {
+    height: 250px;
+    min-width: 300px;
+  }
+  header {
+    font-size: 20px;
+  }
+
+  .card:nth-child(2) > .nombre, .venta, .compra{
+    font-size: 2rem;
+  }
+  .nombre {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  .compra {
+    color: rgb(94, 94, 94);
+    font-size: 1.5rem;
+  }
+
+  .venta {
+    color: rgb(94, 94, 94);
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 281px) {
+  .card {
+    height: 250px;
+    min-width: 250px;
+  }
+}
